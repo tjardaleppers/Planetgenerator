@@ -205,7 +205,7 @@ function start() {
   const normalizedMatrix = normalizeMatrix(matrix);
   console.log("Finish");
   paths = draw(normalizedMatrix);
-  var url = canvas.toDataURL();
+  let url = canvas.toDataURL();
   return url
 }
 

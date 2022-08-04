@@ -1,11 +1,3 @@
-import {doehet} from './test';
-console.log(doehet())
-// import {start} from './diamondsquare/diamondsquare';
-
-// let img = document.getElementById('image');
-// img.src = localStorage.getItem('image');
-// console.log(start())
-
 // initializer
 let scene, camera, renderer, sphere, texture;
 
@@ -19,12 +11,10 @@ function init() {
     
     // render into HTML document
     document.body.appendChild(renderer.domElement);
-    
-    // image = new Image();
-    // image.src = url
 
-    // texture = new THREE.TextureLoader().load(img.src); // gebruik diamond square algoritme om een random map te genereren, daar een jpg bestand van te maken en dat in deze functie te stoppen
+    // texture = new THREE.TextureLoader().load(); // gebruik diamond square algoritme om een random map te genereren, daar een jpg bestand van te maken en dat in deze functie te stoppen
     texture = new THREE.TextureLoader().load('/assets/earthmap.jpg')
+    // texture = new THREE.TextureLoader().load('/assets/canvas.png')
     const geometry = new THREE.SphereBufferGeometry(4, 64, 32);
     const material = new THREE.MeshPhysicalMaterial({map: texture});
     const loader = new THREE.TextureLoader();
